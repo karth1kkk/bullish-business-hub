@@ -1,0 +1,24 @@
+/* Navbar.css */
+.navbar-container {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .nav-item {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 3s; /* Optional: Add delay for staggered effect */
+  }
+  
+  .navbar-container img {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 3s; /* Optional: Add delay for staggered effect */
+  }
+  
