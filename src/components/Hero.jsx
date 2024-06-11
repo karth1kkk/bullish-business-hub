@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="md:w-10/12 w-9/12">
           <video className="pointer-events-none" autoPlay muted playsInline={true} key={videoSrc}>
             <source src={videoSrc} type="video/mp4" />
-            <source className="hidden" src={videoSrc} type="image/png" />
+            <source className="hidden sm:block" src={videoSrc} type="image/png" />
           </video>
         </div>
       </div>
