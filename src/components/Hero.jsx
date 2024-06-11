@@ -42,7 +42,7 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0 translate-y-20"
       >
-        <a href="#highlights" className="btn text-white font-bold text-xl">Register Now</a>
+        <a href="/register" className="btn text-white font-bold text-xl">Register Now</a>
         <p className="font-normal text-xl text-gray">From RM550</p>
       </div>
     </section>
