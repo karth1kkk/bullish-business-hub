@@ -57,7 +57,7 @@ const Hero = () => {
       </div>
       <svg
           aria-hidden="true"
-          className="absolute left-[max(50%,25rem)] top-0 h-[40rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          className="absolute left-[max(50%,25rem)] top-0 h-[30rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
         >
           <defs>
             <pattern
