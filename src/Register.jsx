@@ -5,7 +5,7 @@ const Register = () => {
     <div className='ml-10 align-middle justify-center text-center'>
       <h1>Register</h1>
       <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfD_xxx/formResponse" 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdPxjN1ZxFecJt45M3ZnDLui8Nhjleg6L6uvsQdypj2QPbC2w/viewform" 
         width="1590" 
         height="780" 
         frameborder="0" 

@@ -1,11 +1,12 @@
-import React, { useRef } from 'react'
-import { chipImg, frameImg, frameVideo } from '../utils'
+import React, { useRef, useEffect, useState } from 'react'
+import { chipImg, frameImg, frameImgsmall, frameVideo } from '../utils'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import { animateWithGsap } from '../utils/animations';
 
 const HowItWorks = () => {
   const videoRef = useRef();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 760);
 
   useGSAP(() => {
     gsap.from('#chip', {
@@ -17,14 +18,26 @@ const HowItWorks = () => {
       scale: 2,
       duration: 2,
       ease: 'power2.inOut'
-    })
+    });
 
     animateWithGsap('.g_fadeIn', {
       opacity: 1,
       y: 0,
       duration: 1,
       ease: 'power2.inOut'
-    })
+    });
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 760);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -55,42 +68,52 @@ const HowItWorks = () => {
               />
             </div>
             <div className="hiw-video">
-                <video className="pointer-events-none" playsInline preload="none" muted autoPlay ref={videoRef}>
+              {isMobile ? (
+                <img src={frameImgsmall} alt="frame" className="pointer-events-none" />
+              ) : (
+                <video
+                  className="pointer-events-none"
+                  playsInline
+                  preload="none"
+                  muted
+                  autoPlay
+                  ref={videoRef}
+                >
                   <source src={frameVideo} type="video/mp4" />
                 </video>
-              </div>
+              )}
+            </div>
           </div>
           <p className="text-gray font-semibold text-center mt-3">MT4 Trading App</p>
+        </div>
+
+        <div className="hiw-text-container">
+          <div className="flex flex-1 justify-center flex-col">
+            <p className="hiw-text g_fadeIn">
+              At Bullish Business Hub, we prioritize not just trading strategies, but also money management skills.  {' '}
+              <span className="text-white">
+                Build a solid foundation for sustainable trading success.
+              </span>.
+            </p>
+
+            <p className="hiw-text g_fadeIn">
+              Discover your unique trading style with Bullish Business Hub.
+              <span className="text-white">
+                {' '}Our expert guidance will help you identify high-probability 
+              </span>,
+              setups tailored to your risk tolerance and financial goals.
+            </p>
           </div>
 
-          <div className="hiw-text-container">
-                <div className="flex flex-1 justify-center flex-col">
-                  <p className="hiw-text g_fadeIn">
-                  At Bullish Business Hub, we prioritize not just trading strategies, but also money management skills.  {' '}
-                    <span className="text-white">
-                    Build a solid foundation for sustainable trading success.
-                    </span>.
-                  </p>
-
-                  <p className="hiw-text g_fadeIn">
-                  Discover your unique trading style with Bullish Business Hub.
-                    <span className="text-white">
-                    {' '}Our expert guidance will help you identify high-probability 
-                    </span>,
-                    setups tailored to your risk tolerance and financial goals.
-                  </p>
-                </div>
-              
-
-                <div className="flex-1 flex justify-center flex-col g_fadeIn">
-                  <p className="hiw-text">Join Our Community</p>
-                  <p className="hiw-bigtext">Master Your Trades</p>
-                  <p className="hiw-text">with Expert Guidance</p>
-                </div>
-              </div>
-            </div>
+          <div className="flex-1 flex justify-center flex-col g_fadeIn">
+            <p className="hiw-text">Join Our Community</p>
+            <p className="hiw-bigtext">Master Your Trades</p>
+            <p className="hiw-text">with Expert Guidance</p>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default HowItWorks
+export default HowItWorks;
