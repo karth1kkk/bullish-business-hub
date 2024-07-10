@@ -13,7 +13,7 @@ export const navLists = [
   { name: "About", url: "/about" },  // Add the About page link
   { name: "Register", url: "/register" },
   { name: "Broker", url: "https://h5.vtmarketsapp.com/web/h5/support/register/register.html?referee_user_id=9ee6f03cdf5d45af8b6609d5e9afe566&referee_mt4_account_id=830568" },
-  { name: "Support", url: "https://tr.ee/Oq7ztxAVfj" }
+  { name: "Support", url: "https://tr.ee/ESksfR5dj4" }
 ];
 
 
