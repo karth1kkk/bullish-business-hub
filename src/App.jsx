@@ -12,6 +12,10 @@ import Register from './Register.jsx'
 
 const App = () => {
   return (
+    <>
+    <style>
+
+    </style>
     <Router>
        <Navbar/>
     <main>
@@ -31,6 +35,7 @@ const App = () => {
         </Routes>
         </main>
     </Router>
+    </>
   )
 }
 
