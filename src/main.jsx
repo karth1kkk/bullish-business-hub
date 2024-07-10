@@ -6,6 +6,8 @@ import './index.css'
 //...
 import * as Sentry from "@sentry/react";
 
+document.body.style.overflowX = 'hidden';
+
 Sentry.init({
   dsn: "https://d674932a77e6d9b9ced1190d70fd4691@o4506876178464768.ingest.us.sentry.io/4506876181151744",
   integrations: [
