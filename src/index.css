@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -16,8 +17,7 @@ body {
   height: 100%;
   background: #000000;
   border-color: #3b3b3b;
-  user-select: none;
-  
+  user-select: none; 
 }
 
 canvas {
