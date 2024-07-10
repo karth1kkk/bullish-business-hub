@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.0",
+    "@heroicons/react": "^2.1.4",
     "@react-three/drei": "^9.101.0",
     "@react-three/fiber": "^8.15.19",
     "@sentry/react": "^7.106.0",

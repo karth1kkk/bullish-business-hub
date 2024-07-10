@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <section className="w-full nav-height bg-black relative">
       <div className="h-5/6 w-full flex-center flex-col">
-        <p id="hero" className="hero-title py-5">Presenting</p>
+        <p id="hero" className="hero-title py-5 z-10">Presenting</p>
         <div className="md:w-10/12 w-9/12">
           {isSmallScreen ? (
             <img style={{
@@ -52,9 +52,33 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0 translate-y-20"
       >
-        <a href="/register" className="btn text-white font-bold text-xl">Register Now</a>
-        <p className="font-normal text-xl text-gray">And Start Your Trading Journey</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPxjN1ZxFecJt45M3ZnDLui8Nhjleg6L6uvsQdypj2QPbC2w/viewform" className="btn text-white font-bold text-xl z-10">Register Now</a>
+        <p className="font-normal text-xl text-gray z-10">And Start Your Trading Journey</p>
       </div>
+      <svg
+          aria-hidden="true"
+          className="absolute left-[max(50%,25rem)] top-0 h-[45rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+        >
+          <defs>
+            <pattern
+              x="50%"
+              y={-1}
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width={200}
+              height={200}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          {/* <svg x="50%" y={-1} className="overflow-visible fill-gray-900">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              strokeWidth={0}
+            />
+          </svg> */}
+          <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={-0.1} />
+        </svg>
     </section>
   );
 };

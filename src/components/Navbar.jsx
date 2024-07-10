@@ -7,6 +7,25 @@ const Navbar = () => {
   return (
     <header className="navbar-container bg-black w-full py-5 sm:px-10 px-5 flex justify-between items-center">
       <nav className="flex w-full screen-min-width">
+      <svg
+          aria-hidden="true"
+          className="absolute left-[max(38.7%,25rem)] top-0 h-[5rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+        >
+          <defs>
+            <pattern
+              x="50%"
+              y={-1}
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width={200}
+              height={200}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+
+          <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={-0} />
+        </svg>
         <Link to="/">
           <img src={appleImg} alt="Apple" width={40} height={18} />
         </Link>
