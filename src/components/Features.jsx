@@ -40,8 +40,8 @@ const Features = () => {
         
         <div className=" text-white flex flex-col justify-center items-center overflow-hidden">
           <div className="mt-32 mb-24 pl-24">
-            <h2 className="text-5xl lg:text-7xl font-semibold">iPhone.</h2>
-            <h2 className="text-5xl lg:text-7xl font-semibold">Forged in titanium.</h2>
+            <h2 className="text-5xl lg:text-7xl font-semibold">Bullish Business Hub.</h2>
+            <h2 className="text-5xl lg:text-7xl font-semibold">Empowering Traders Worldwide.</h2>
           </div>
 
           <div className="flex-center flex-col sm:px-10">
