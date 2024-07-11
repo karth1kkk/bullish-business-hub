@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import * as Sentry from '@sentry/react';
 import About from './About.jsx'
 import Register from './Register.jsx'
+import './index.css'
 
 const App = () => {
   return (

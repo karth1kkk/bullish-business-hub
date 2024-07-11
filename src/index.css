@@ -17,7 +17,6 @@ body {
   background: #000000;
   border-color: #3b3b3b;
   user-select: none; 
-  box-sizing: border-box;
 }
 
 canvas {
