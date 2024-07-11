@@ -29,20 +29,20 @@ export const hightlightsSlides = [
     videoDuration: 4,
   },
   {
-    id: 2,
+    id: 3,
     textLists: ["Market Analysis.", "Strategize and Succeed."],
     video: highlightSecondVideo,
-    videoDuration: 5,
+    videoDuration: 2,
   },
   {
-    id: 3,
+    id: 2,
     textLists: [
       "Diverse Asset Classes.",
       "Trade Anytime, Anywhere.",
       "Maximize Your Returns.",
     ],
     video: highlightThirdVideo,
-    videoDuration: 2,
+    videoDuration: 5,
   },
   {
     id: 4,
