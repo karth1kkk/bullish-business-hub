@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 760);
-
   const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
@@ -55,24 +54,26 @@ const Hero = () => {
         <p className="font-normal text-xl text-gray z-10">And Start Your Trading Journey</p>
       </div>
       
-      <svg
-        aria-hidden="true"
-        className="absolute left-[max(50%,25rem)] top-0 h-[40rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] z-0"
-      >
-        <defs>
-          <pattern
-            x="50%"
-            y={-1}
-            id="e813992c-7d03-4cc4-a2bd-151760b470a0"
-            width={200}
-            height={200}
-            patternUnits="userSpaceOnUse"
-          >
-            <path d="M100 200V.5M.5 .5H200" fill="none" />
-          </pattern>
-        </defs>
-        <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={-0.1} />
-      </svg>
+      {!isSmallScreen && (
+        <svg
+          aria-hidden="true"
+          className="absolute left-[max(50%,25rem)] top-0 h-[40rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)] z-0"
+        >
+          <defs>
+            <pattern
+              x="50%"
+              y={-1}
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width={200}
+              height={200}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <rect fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" width="100%" height="100%" strokeWidth={-0.1} />
+        </svg>
+      )}
     </section>
   );
 };
