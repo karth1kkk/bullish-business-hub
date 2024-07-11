@@ -66,7 +66,7 @@ const VideoCarousel = () => {
             gsap.to(videoDivRef.current[videoId], {
               width:
                 window.innerWidth < 760
-                  ? "14vw" // mobile10vw
+                  ? "10vw" // mobile
                   : window.innerWidth < 1200
                   ? "10vw" // tablet
                   : "4vw", // laptop
