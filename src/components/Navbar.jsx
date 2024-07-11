@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="navbar-container bg-black w-full py-5 sm:px-10 px-5 flex justify-between items-center">
+    <header className="navbar-container bg-black w-full py-5 sm:px-5 px-5 flex justify-between items-center">
       <nav className="flex w-full screen-min-width">
         {!isSmallScreen && (
           <svg
